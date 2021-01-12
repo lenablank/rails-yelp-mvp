@@ -1,0 +1,17 @@
+<div class="container">
+    <h1><strong>Discover all restaurants or add a new one yourself</strong>!</h1>
+    <%= link_to "Add a new restaurant", new_restaurant_path, class:"btn btn-dark m-3" %>
+</div>
+
+<div class="container">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card d-flex ">
+      <div class="">
+        <h3><%= restaurant.name %> - <%= restaurant.category.capitalize %></h3>
+        <h3><%= link_to "See the details", restaurant_path(restaurant), class: "btn btn-info m-3" %></h3>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+

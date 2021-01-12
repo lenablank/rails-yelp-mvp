@@ -1,0 +1,11 @@
+<div class="card d-flex ">
+
+  <h1><strong>Add a review</strong></h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+   <%= f.input :raiting %>
+  <%= f.submit "Add!" %>
+<% end %>
+
+</div>

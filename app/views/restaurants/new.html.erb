@@ -1,0 +1,24 @@
+<div class="card d-flex ">
+
+  <h1><strong>Add a new restaurant</strong></h1>
+
+  <%= form_for(@restaurant) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+
+    <%= f.submit "Add!"%>
+
+    <% end  %>
+
+    <h3><%= link_to "Back to list", restaurants_path, class: "btn btn-secondary m-3" %></h3>
+
+</div>

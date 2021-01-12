@@ -1,0 +1,15 @@
+<div class="card d-flex ">
+
+  <h1><strong><%= @restaurant.name %><strong></h1>
+  <h3>Category: <%= @restaurant.category %></h3>
+  <h5>Address: <%=  @restaurant.address%></h5>
+
+  <% @restaurant.reviews.each do |review| %>
+  <h6><%= review.content %></h6>
+  <hr>
+  <% end %>
+
+  <h3><%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-secondary m-3" %></h3>
+  <h3><%= link_to "Back to list", restaurants_path, class: "btn btn-secondary m-3" %></h3>
+
+</div>
